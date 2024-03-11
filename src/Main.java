@@ -7,7 +7,7 @@ public class Main {
         long champ = 10L;
         float curry = 5.0f;
         double samuel = 69;
-        System.out.println("Значение переменной с типом int равно " + cat + System.lineSeparator() + "Значение переменной с типом byte равно " + dog + System.lineSeparator() + "Значени переменной с типом short равно " + pussyCat + System.lineSeparator() + "Значение перемнной с типом long равно " + champ + System.lineSeparator() + "Значение переменной с типом float равно " + curry + System.lineSeparator() + "Значение переменной с типов double равно " + samuel );
+        System.out.println("Значение переменной cat с типом int равно " + cat + System.lineSeparator() + "Значение переменной dog с типом byte равно " + dog + System.lineSeparator() + "Значени переменной pussycat с типом short равно " + pussyCat + System.lineSeparator() + "Значение перемнной champ с типом long равно " + champ + System.lineSeparator() + "Значение переменной curry с типом float равно " + curry + System.lineSeparator() + "Значение переменной samuel с типов double равно " + samuel );
         // Exercise 2
         float one = 27.12f;
         long two = 987678965549L;
@@ -24,10 +24,11 @@ public class Main {
         System.out.println("На каждого ученика расчитано " + bumaga / (lyuda + ana + kata) + " листов бумаги");
         // Exercise 4
         byte firstPeriod = 20;
-        short secondPeriod = 1440;
-        short thirdPeriod = 4320;
-        int fourthPeriod = 43200;
-        System.out.println("За " + firstPeriod + " минут машина произвела " + firstPeriod / 2 + " штук бутылок" + System.lineSeparator() + "За " + secondPeriod + " минут машина произвела " + secondPeriod / 2 + " штук бутылок" + System.lineSeparator() +"За " + thirdPeriod + " минут машина произвела " + thirdPeriod / 2 + " штук бутылок" + System.lineSeparator() +"За " + fourthPeriod + " минут машина произвела " + fourthPeriod / 2 + " штук бутылок");;
+        short secondPeriod = 24 * 60;
+        short thirdPeriod = 24 * 60 * 3;
+        int fourthPeriod = 24 * 60 * 30;
+        int bottlesPerMinute = 16 / 2;
+        System.out.println("За " + firstPeriod + " минут машина произвела " + firstPeriod * bottlesPerMinute + " штук бутылок" + System.lineSeparator() + "За " + secondPeriod + " минут машина произвела " + secondPeriod * bottlesPerMinute + " штук бутылок" + System.lineSeparator() +"За " + thirdPeriod + " минут машина произвела " + thirdPeriod * bottlesPerMinute + " штук бутылок" + System.lineSeparator() +"За " + fourthPeriod + " минут машина произвела " + fourthPeriod * bottlesPerMinute + " штук бутылок");;
         // Exercise 5
         byte allPaint = 120;
         byte whitePaintNeededForOneRoom = 2;
@@ -53,19 +54,21 @@ public class Main {
         int averageLoss = (minimumLoss + maximumLoss) / 2;
         System.out.println("При похудении на 250 грамм в день 7 кг получится сбросить за " + target / minimumLoss + " дней. При 500 г в день: " + target / maximumLoss + " в среднем: " + target / averageLoss);
         // Exercise 8
-        int mashaBeforeRaise =          67760;
-        int denisBeforeRaise =          83690;
-        int krisBeforeRaise =           76230;
-        int yearIncomeMashaBefore =     mashaBeforeRaise * 12;
-        int yearIncomeKrisBefore =      krisBeforeRaise * 12;
-        int yearIncomeDenisBefore =     denisBeforeRaise * 12;
-        int mashaAfterRaise =           ((mashaBeforeRaise / 100) * 10) + mashaBeforeRaise;
-        int denisAfterRaise =           ((denisBeforeRaise / 100) *10) + denisBeforeRaise;
-        int krisAfterRaise =            ((krisBeforeRaise / 100) * 10) + krisBeforeRaise;
-        int yearIncomeMashaAfter =      ((yearIncomeMashaBefore / 100) *10) + yearIncomeMashaBefore;
-        int yearIncomeDenisAfter =      ((yearIncomeDenisBefore / 100) * 10) + yearIncomeDenisBefore;
-        int yearIncomeKrisAfter =       ((yearIncomeKrisBefore / 100) * 10) + yearIncomeKrisBefore;
-        System.out.println("маша до повышения получала в месяц: " + mashaBeforeRaise + " в год: " + yearIncomeMashaBefore + ". после повышения: " + mashaAfterRaise + " и в год: " + yearIncomeMashaAfter + System.lineSeparator() + "денис получал до повышения в месяц: " + denisBeforeRaise + " и в год: " + yearIncomeDenisBefore + ". после повышения: " + denisAfterRaise + "  в месяц и в год: " + yearIncomeDenisAfter + System.lineSeparator() + "кристина получала до повышения " + krisBeforeRaise + " в месяц и в год: " + yearIncomeKrisBefore + ". после повышениея: " + krisAfterRaise + " в месяц и в год: " + yearIncomeKrisAfter);
+        double percentRaise = 0.1;
+        byte timePeriod = 12;
+        int mashaBeforeRaise =             67760;
+        int denisBeforeRaise =             83690;
+        int krisBeforeRaise =              76230;
+        int yearIncomeMashaBefore =        mashaBeforeRaise * timePeriod;
+        int yearIncomeKrisBefore =         krisBeforeRaise * timePeriod;
+        int yearIncomeDenisBefore =        denisBeforeRaise * timePeriod;
+        double mashaAfterRaise =           (mashaBeforeRaise * percentRaise) + mashaBeforeRaise;
+        double denisAfterRaise =           (denisBeforeRaise * percentRaise) + denisBeforeRaise;
+        double krisAfterRaise =            (krisBeforeRaise * percentRaise) + krisBeforeRaise;
+        double yearIncomeMashaAfter =      (yearIncomeMashaBefore * percentRaise) + yearIncomeMashaBefore;
+        double yearIncomeDenisAfter =      (yearIncomeDenisBefore * percentRaise) + yearIncomeDenisBefore;
+        double yearIncomeKrisAfter =       (yearIncomeKrisBefore * percentRaise) + yearIncomeKrisBefore;
+        System.out.println("Маша теперь получает " + mashaAfterRaise + " рублей. Годовой доход вырос на " + (yearIncomeMashaAfter - yearIncomeMashaBefore) + " рублей." + System.lineSeparator() + "Денис теперь получает " + denisAfterRaise + " рублей. Годовой доход вырос на " + (yearIncomeDenisAfter - yearIncomeDenisBefore) + " рублей." + System.lineSeparator() + "Кристина теперь получает " + krisAfterRaise + " рублей. Годовой доход вырос на " + (yearIncomeKrisAfter - yearIncomeKrisBefore));
 
     }
 }
