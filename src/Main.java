@@ -23,12 +23,12 @@ public class Main {
         short bumaga = 480;
         System.out.println("На каждого ученика расчитано " + bumaga / (lyuda + ana + kata) + " листов бумаги");
         // Exercise 4
-        byte firstPeriod = 20;
-        short secondPeriod = 24 * 60;
-        short thirdPeriod = 24 * 60 * 3;
-        int fourthPeriod = 24 * 60 * 30;
+        byte twentyMinutes = 20;
+        short oneDay = 24 * 60;
+        int threeDays = oneDay * 3;
+        int aMonth = oneDay * 30;
         int bottlesPerMinute = 16 / 2;
-        System.out.println("За " + firstPeriod + " минут машина произвела " + firstPeriod * bottlesPerMinute + " штук бутылок" + System.lineSeparator() + "За " + secondPeriod + " минут машина произвела " + secondPeriod * bottlesPerMinute + " штук бутылок" + System.lineSeparator() +"За " + thirdPeriod + " минут машина произвела " + thirdPeriod * bottlesPerMinute + " штук бутылок" + System.lineSeparator() +"За " + fourthPeriod + " минут машина произвела " + fourthPeriod * bottlesPerMinute + " штук бутылок");;
+        System.out.println("За " + twentyMinutes + " минут машина произвела " + twentyMinutes * bottlesPerMinute + " штук бутылок" + System.lineSeparator() + "За " + oneDay + " минут машина произвела " + oneDay * bottlesPerMinute + " штук бутылок" + System.lineSeparator() +"За " + threeDays + " минут машина произвела " + threeDays * bottlesPerMinute + " штук бутылок" + System.lineSeparator() +"За " + aMonth + " минут машина произвела " + aMonth * bottlesPerMinute + " штук бутылок");;
         // Exercise 5
         byte allPaint = 120;
         byte whitePaintNeededForOneRoom = 2;
@@ -54,8 +54,8 @@ public class Main {
         int averageLoss = (minimumLoss + maximumLoss) / 2;
         System.out.println("При похудении на 250 грамм в день 7 кг получится сбросить за " + target / minimumLoss + " дней. При 500 г в день: " + target / maximumLoss + " в среднем: " + target / averageLoss);
         // Exercise 8
-        double percentRaise = 0.1;
-        byte timePeriod = 12;
+        double percentRaise =              0.1;
+        byte timePeriod =                  12;
         int mashaBeforeRaise =             67760;
         int denisBeforeRaise =             83690;
         int krisBeforeRaise =              76230;
